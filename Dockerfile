@@ -5,7 +5,7 @@ WORKDIR /usr/local/
 RUN apk update && \
     apk add --no-cache tzdata python3 runit py3-pip && \
     apk add --no-cache --virtual .build-deps git gcc linux-headers musl-dev python3-dev && \
-    git clone --depth=1 https://github.com/sola97/v2-ui.git && \
+    git clone --depth=1 https://github.com/DuLerWeil/v2-ui.git && \
     cd v2-ui && \
     chmod +x bin/v2ray-v2-ui bin/v2ctl /usr/local/v2-ui/v2-ui.sh && \
     python3 -m pip install --disable-pip-version-check --ignore-installed --no-cache-dir --quiet -r /usr/local/v2-ui/requirements.txt  && \
